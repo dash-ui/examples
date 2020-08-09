@@ -13,10 +13,16 @@ npm i design-system
 ## Quick start
 
 ```js
-import {Text} from 'design-system'
+import {DesignSystem, Text} from 'design-system'
 
 export function App() {
-  return <Text variant='heading'>Hello world</Text>
+  return (
+    // This is a context provider for the design system. It also injects the
+    // necessary global styles.
+    <DesignSystem>
+      <Text variant='heading'>Hello world</Text>
+    </DesignSystem>
+  )
 }
 ```
 
